@@ -1,0 +1,64 @@
+{
+  "name": "UserProgress",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "Email de l'utilisateur"
+    },
+    "completed_modules": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Liste des IDs de modules compl\u00e9t\u00e9s"
+    },
+    "completed_lessons": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Liste des IDs de le\u00e7ons compl\u00e9t\u00e9es"
+    },
+    "quiz_scores": {
+      "type": "object",
+      "description": "Scores des quiz par module ID"
+    },
+    "exercise_scores": {
+      "type": "object",
+      "description": "Scores des exercices par le\u00e7on ID"
+    },
+    "total_points": {
+      "type": "number",
+      "default": 0,
+      "description": "Points totaux accumul\u00e9s"
+    },
+    "badges": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Badges d\u00e9bloqu\u00e9s"
+    },
+    "current_level": {
+      "type": "string",
+      "enum": [
+        "beginner",
+        "intermediate",
+        "advanced"
+      ],
+      "default": "beginner"
+    },
+    "certificate_earned": {
+      "type": "boolean",
+      "default": false
+    },
+    "last_activity": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "user_email"
+  ]
+}
